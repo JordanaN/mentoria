@@ -2,7 +2,7 @@ require 'sqlite3'
 require 'sequel'
 
 class Employee
-  attr_reader :rowid, :full_name, :birthdate, :salary, :data_base
+  attr_reader :full_name, :birthdate, :salary, :data_base
 
   def initialize(full_name:, birthdate:, salary:)
     @full_name = full_name
