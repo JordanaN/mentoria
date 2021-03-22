@@ -25,17 +25,6 @@ class Logger
     end
   end
 
-  def email_message(text)
-    message = <<-END.split("\n").map!(&:strip).join("\n")
-      From: Private Person <from@example.com>
-      To: A Test User <to@example.com>
-      Subject: Logger report
-
-      #{text}
-      END
-    message
-  end
-
   def deliver(text)
     case @delivery
     when :by_email
